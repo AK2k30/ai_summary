@@ -17,7 +17,7 @@
 }
 
 .main:before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  background-image: url("../src/assets/img/a.jpg");
   position: absolute;
   content: "";
   z-index: 2;
@@ -38,7 +38,7 @@
   filter: invert(1);
 }
 
-.gradient {
+/* .gradient {
   height: fit-content;
   z-index: 3;
   width: 100%;
@@ -61,7 +61,7 @@
   filter: blur(100px) saturate(150%);
   top: 80px;
   opacity: 0.15;
-}
+} */
 
 @media screen and (max-width: 640px) {
   .main {
@@ -72,7 +72,17 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 7xl;
+  margin: 0 auto;
+  padding: 16px; /* Update this value according to your requirements */
+  background-image: url("../src/assets/img/a.jpg");
+  
 }
 
 .black_btn {
@@ -112,5 +122,14 @@
 }
 
 .summary_box {
-  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-4;
+  background-color: aliceblue;
+  border: 2px solid #ccc; /* Add a 2px solid border with a light gray (#ccc) color */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.red_gradient{
+  background-image: linear-gradient(to right, #ff0000, #ff8080);
+  background-clip: text;
+  color: transparent;
 }
